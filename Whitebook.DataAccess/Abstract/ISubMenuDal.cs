@@ -6,7 +6,7 @@ using Whitebook.Whitebook.Dto.Entities;
 
 namespace Whitebook.DataAccess.Abstract
 {
-    public interface ISubMenuDal : IEntityRepository<Content>
+    public interface ISubMenuDal : IEntityRepository<Submenu>
     {
     }
 }
