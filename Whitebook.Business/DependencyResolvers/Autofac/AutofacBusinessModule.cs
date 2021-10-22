@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Text;
 using Whitebook.Business.Abstract;
 using Whitebook.Business.Concrete;
-using Whitebook.DataAccess.Abstract;
-using Whitebook.DataAccess.Concrete;
+using WhiteBookDataAccess.Abstract;
+using WhiteBookDataAccess.Concrete;
 
 namespace Whitebook.Business.DependencyResolvers.Autofac
 {
@@ -23,7 +23,7 @@ namespace Whitebook.Business.DependencyResolvers.Autofac
             builder.RegisterType<EfProjectDal>().As<IProjectDal>().SingleInstance();
 
             builder.RegisterType<SubMenuManager>().As<ISubMenuService>().SingleInstance();
-            builder.RegisterType<EfSubMenuDal>().As<ISubMenuDal>().SingleInstance();
+            builder.RegisterType<EfSubmenuDal>().As<ISubmenuDal>().SingleInstance();
         }
     }
 }
