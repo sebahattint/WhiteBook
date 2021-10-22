@@ -3,34 +3,42 @@ using System.Collections.Generic;
 using System.Text;
 using Whitebook.Business.Abstract;
 using Whitebook.Whitebook.Dto.Entities;
+using WhiteBookDataAccess.Abstract;
 
 namespace Whitebook.Business.Concrete
 {
     public class ProjectManager : IProjectService
     {
+        IProjectDal _projectDal;
+
+        public ProjectManager(IProjectDal projectDal)
+        {
+            _projectDal = projectDal;
+        }
+
         public void Add(Project entity)
         {
-            throw new NotImplementedException();
+            _projectDal.Add(entity);
         }
 
         public void Delete(Project entity)
         {
-            throw new NotImplementedException();
+            _projectDal.Delete(entity);
         }
 
-        public Project Get()
+        public Project Get(int id)
         {
-            throw new NotImplementedException();
+            return _projectDal.Get(x=>x.Id==id);
         }
 
         public List<Project> GetAll()
         {
-            throw new NotImplementedException();
+            return _projectDal.GetAll();
         }
 
         public void Update(Project entity)
         {
-            throw new NotImplementedException();
+            _projectDal.Update(entity);
         }
     }
 }

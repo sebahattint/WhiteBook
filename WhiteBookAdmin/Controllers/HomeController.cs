@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WhiteBookAdmin.Controllers
 {
-    public class Class:Controller
+    public class HomeController : Controller
     {
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
