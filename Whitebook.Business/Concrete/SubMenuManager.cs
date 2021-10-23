@@ -23,6 +23,11 @@ namespace Whitebook.Business.Concrete
             throw new NotImplementedException();
         }
 
+        public Submenu Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Submenu> GetAll()
         {
             throw new NotImplementedException();

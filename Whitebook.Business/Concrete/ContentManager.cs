@@ -23,6 +23,11 @@ namespace Whitebook.Business.Concrete
             throw new NotImplementedException();
         }
 
+        public Content Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Content> GetAll()
         {
             throw new NotImplementedException();

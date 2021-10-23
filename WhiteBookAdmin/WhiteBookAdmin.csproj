@@ -1,15 +1,124 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <Content Remove="wwwroot\css\nucleo-icons.css" />
+    <Content Remove="wwwroot\css\nucleo-svg.css" />
+    <Content Remove="wwwroot\css\soft-ui-dashboard.css" />
+    <Content Remove="wwwroot\css\soft-ui-dashboard.css.map" />
+    <Content Remove="wwwroot\css\soft-ui-dashboard.min.css" />
+    <Content Remove="wwwroot\img\apple-icon.png" />
+    <Content Remove="wwwroot\img\bruce-mars.jpg" />
+    <Content Remove="wwwroot\img\curved-images\curved0.jpg" />
+    <Content Remove="wwwroot\img\curved-images\curved1.jpg" />
+    <Content Remove="wwwroot\img\curved-images\curved14.jpg" />
+    <Content Remove="wwwroot\img\curved-images\curved6.jpg" />
+    <Content Remove="wwwroot\img\curved-images\curved8.jpg" />
+    <Content Remove="wwwroot\img\curved-images\white-curved.jpeg" />
+    <Content Remove="wwwroot\img\down-arrow-dark.svg" />
+    <Content Remove="wwwroot\img\down-arrow.svg" />
+    <Content Remove="wwwroot\img\favicon.png" />
+    <Content Remove="wwwroot\img\home-decor-1.jpg" />
+    <Content Remove="wwwroot\img\home-decor-2.jpg" />
+    <Content Remove="wwwroot\img\home-decor-3.jpg" />
+    <Content Remove="wwwroot\img\illustrations\rocket-white.png" />
+    <Content Remove="wwwroot\img\ivana-square.jpg" />
+    <Content Remove="wwwroot\img\ivancik.jpg" />
+    <Content Remove="wwwroot\img\kal-visuals-square.jpg" />
+    <Content Remove="wwwroot\img\logo-ct.png" />
+    <Content Remove="wwwroot\img\logos\mastercard.png" />
+    <Content Remove="wwwroot\img\logos\visa.png" />
+    <Content Remove="wwwroot\img\marie.jpg" />
+    <Content Remove="wwwroot\img\shapes\waves-white.svg" />
+    <Content Remove="wwwroot\img\small-logos\icon-sun-cloud.png" />
+    <Content Remove="wwwroot\img\small-logos\logo-atlassian.svg" />
+    <Content Remove="wwwroot\img\small-logos\logo-invision.svg" />
+    <Content Remove="wwwroot\img\small-logos\logo-jira.svg" />
+    <Content Remove="wwwroot\img\small-logos\logo-slack.svg" />
+    <Content Remove="wwwroot\img\small-logos\logo-spotify.svg" />
+    <Content Remove="wwwroot\img\small-logos\logo-webdev.svg" />
+    <Content Remove="wwwroot\img\small-logos\logo-xd.svg" />
+    <Content Remove="wwwroot\img\team-1.jpg" />
+    <Content Remove="wwwroot\img\team-2.jpg" />
+    <Content Remove="wwwroot\img\team-3.jpg" />
+    <Content Remove="wwwroot\img\team-4.jpg" />
+    <Content Remove="wwwroot\img\vr-bg.jpg" />
+    <Content Remove="wwwroot\js\core\bootstrap.min.js" />
+    <Content Remove="wwwroot\js\core\popper.min.js" />
+    <Content Remove="wwwroot\js\plugins\bootstrap-notify.js" />
+    <Content Remove="wwwroot\js\plugins\Chart.extension.js" />
+    <Content Remove="wwwroot\js\plugins\chartjs.min.js" />
+    <Content Remove="wwwroot\js\plugins\choices.min.js" />
+    <Content Remove="wwwroot\js\plugins\fullcalendar.min.js" />
+    <Content Remove="wwwroot\js\plugins\perfect-scrollbar.min.js" />
+    <Content Remove="wwwroot\js\plugins\smooth-scrollbar.min.js" />
+    <Content Remove="wwwroot\js\soft-ui-dashboard.js" />
+    <Content Remove="wwwroot\js\soft-ui-dashboard.js.map" />
+    <Content Remove="wwwroot\js\soft-ui-dashboard.min.js" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Whitebook.Business\Whitebook.Business.csproj" />
+    <None Include="soft-ui-dashboard-main\.github\workflows\main.yml" />
+    <None Include="wwwroot\css\nucleo-icons.css" />
+    <None Include="wwwroot\css\nucleo-svg.css" />
+    <None Include="wwwroot\css\soft-ui-dashboard.css" />
+    <None Include="wwwroot\css\soft-ui-dashboard.css.map" />
+    <None Include="wwwroot\css\soft-ui-dashboard.min.css" />
+    <None Include="wwwroot\img\apple-icon.png" />
+    <None Include="wwwroot\img\bruce-mars.jpg" />
+    <None Include="wwwroot\img\curved-images\curved0.jpg" />
+    <None Include="wwwroot\img\curved-images\curved1.jpg" />
+    <None Include="wwwroot\img\curved-images\curved14.jpg" />
+    <None Include="wwwroot\img\curved-images\curved6.jpg" />
+    <None Include="wwwroot\img\curved-images\curved8.jpg" />
+    <None Include="wwwroot\img\curved-images\white-curved.jpeg" />
+    <None Include="wwwroot\img\down-arrow-dark.svg" />
+    <None Include="wwwroot\img\down-arrow.svg" />
+    <None Include="wwwroot\img\favicon.png" />
+    <None Include="wwwroot\img\home-decor-1.jpg" />
+    <None Include="wwwroot\img\home-decor-2.jpg" />
+    <None Include="wwwroot\img\home-decor-3.jpg" />
+    <None Include="wwwroot\img\illustrations\rocket-white.png" />
+    <None Include="wwwroot\img\ivana-square.jpg" />
+    <None Include="wwwroot\img\ivancik.jpg" />
+    <None Include="wwwroot\img\kal-visuals-square.jpg" />
+    <None Include="wwwroot\img\logo-ct.png" />
+    <None Include="wwwroot\img\logos\mastercard.png" />
+    <None Include="wwwroot\img\logos\visa.png" />
+    <None Include="wwwroot\img\marie.jpg" />
+    <None Include="wwwroot\img\shapes\waves-white.svg" />
+    <None Include="wwwroot\img\small-logos\icon-sun-cloud.png" />
+    <None Include="wwwroot\img\small-logos\logo-atlassian.svg" />
+    <None Include="wwwroot\img\small-logos\logo-invision.svg" />
+    <None Include="wwwroot\img\small-logos\logo-jira.svg" />
+    <None Include="wwwroot\img\small-logos\logo-slack.svg" />
+    <None Include="wwwroot\img\small-logos\logo-spotify.svg" />
+    <None Include="wwwroot\img\small-logos\logo-webdev.svg" />
+    <None Include="wwwroot\img\small-logos\logo-xd.svg" />
+    <None Include="wwwroot\img\team-1.jpg" />
+    <None Include="wwwroot\img\team-2.jpg" />
+    <None Include="wwwroot\img\team-3.jpg" />
+    <None Include="wwwroot\img\team-4.jpg" />
+    <None Include="wwwroot\img\vr-bg.jpg" />
+    <None Include="wwwroot\js\core\bootstrap.min.js" />
+    <None Include="wwwroot\js\core\popper.min.js" />
+    <None Include="wwwroot\js\plugins\bootstrap-notify.js" />
+    <None Include="wwwroot\js\plugins\Chart.extension.js" />
+    <None Include="wwwroot\js\plugins\chartjs.min.js" />
+    <None Include="wwwroot\js\plugins\choices.min.js" />
+    <None Include="wwwroot\js\plugins\fullcalendar.min.js" />
+    <None Include="wwwroot\js\plugins\perfect-scrollbar.min.js" />
+    <None Include="wwwroot\js\plugins\smooth-scrollbar.min.js" />
+    <None Include="wwwroot\js\soft-ui-dashboard.js" />
+    <None Include="wwwroot\js\soft-ui-dashboard.js.map" />
+    <None Include="wwwroot\js\soft-ui-dashboard.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
 </Project>
