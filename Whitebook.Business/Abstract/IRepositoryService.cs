@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Whitebook.Business.Abstract
+namespace WhiteBookBusiness.Abstract
 {
     public interface IRepositoryService<T>
     {

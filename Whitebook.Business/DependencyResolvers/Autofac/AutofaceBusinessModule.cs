@@ -2,14 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Whitebook.Business.Abstract;
-using Whitebook.Business.Concrete;
+using WhiteBookBusiness.Abstract;
+using WhiteBookBusiness.Concrete;
 using WhiteBookDataAccess.Abstract;
 using WhiteBookDataAccess.Concrete;
 
 namespace Whitebook.Business.DependencyResolvers.Autofac
 {
-    public class AutofacBusinessModule:Module
+    public class AutofaceBusinessModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {

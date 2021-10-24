@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Whitebook.Whitebook.Dto.Entities;
+using Whitebook.WhiteBookDto.Entities;
 
 namespace WhiteBookDataAccess.Abstract
 {

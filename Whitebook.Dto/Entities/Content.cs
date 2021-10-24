@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Whitebook.Dto.Dto;
 
-namespace Whitebook.Whitebook.Dto.Entities
+namespace Whitebook.WhiteBookDto.Entities
 {
     public class Content:IEntity
     {
@@ -11,6 +11,8 @@ namespace Whitebook.Whitebook.Dto.Entities
         public int CategoryId { get; set; }
         public string Name { get; set; }
         public string Text { get; set; }
+        public bool Status { get; set; }
+        public DateTime Date { get; set; }
 
     }
 }

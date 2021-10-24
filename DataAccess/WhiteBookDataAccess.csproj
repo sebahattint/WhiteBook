@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Whitebook.Dto\Whitebook.Dto.csproj" />
+    <ProjectReference Include="..\Whitebook.Dto\WhiteBookDto.csproj" />
   </ItemGroup>
 
 </Project>

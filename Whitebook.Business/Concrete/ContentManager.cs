@@ -1,41 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Whitebook.Business.Abstract;
-using Whitebook.Whitebook.Dto.Entities;
+using Whitebook.WhiteBookDto.Entities;
+using WhiteBookBusiness.Abstract;
+using WhiteBookDataAccess.Abstract;
 
-namespace Whitebook.Business.Concrete
+namespace WhiteBookBusiness.Concrete
 {
     public class ContentManager : IContentService
     {
+        IContentDal _contentDal;
+
+        public ContentManager(IContentDal contentDal)
+        {
+            _contentDal = contentDal;
+        }
+
         public void Add(Content entity)
         {
-            throw new NotImplementedException();
+            _contentDal.Add(entity);
         }
 
         public void Delete(Content entity)
         {
-            throw new NotImplementedException();
-        }
-
-        public Content Get()
-        {
-            throw new NotImplementedException();
+            _contentDal.Delete(entity);
         }
 
         public Content Get(int id)
         {
-            throw new NotImplementedException();
+            return _contentDal.Get(x=>x.Id==id);
         }
 
         public List<Content> GetAll()
         {
-            throw new NotImplementedException();
+            return _contentDal.GetAll();
         }
 
         public void Update(Content entity)
         {
-            throw new NotImplementedException();
+            _contentDal.Update(entity);
         }
     }
 }

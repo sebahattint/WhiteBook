@@ -6,21 +6,23 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using WhiteBookAdmin.Models;
+using WhiteBookBusiness.Abstract;
 
 namespace WhiteBookAdmin.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        public IProjectService _projectService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IProjectService projectService)
         {
-            _logger = logger;
+            _projectService = projectService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var result = _projectService.GetAll();
+            return View(result);
         }
 
         public IActionResult Privacy()

@@ -6,12 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
     <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\WhiteBookDataAccess.csproj" />
-    <ProjectReference Include="..\Whitebook.Dto\Whitebook.Dto.csproj" />
+    <ProjectReference Include="..\Whitebook.Dto\WhiteBookDto.csproj" />
   </ItemGroup>
 
 </Project>

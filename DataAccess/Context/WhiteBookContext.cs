@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Whitebook.Whitebook.Dto.Entities;
+using Whitebook.WhiteBookDto.Entities;
 
 namespace WhiteBookDataAccess.Context
 {
@@ -10,7 +10,7 @@ namespace WhiteBookDataAccess.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server = (localdb)\mssqllocaldb; initial catalog =DbMvcProje; integrated security = true");
+            optionsBuilder.UseSqlServer(@"server = (localdb)\mssqllocaldb; initial catalog =WhiteBook; integrated security = true");
         }
 
         public DbSet<Content> Contents { get; set; }

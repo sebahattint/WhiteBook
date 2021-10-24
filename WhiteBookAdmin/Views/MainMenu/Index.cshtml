@@ -1,0 +1,65 @@
+﻿@using Whitebook.WhiteBookDto.Entities
+@model List<MainMenu>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="table-responsive">
+        <table class="table align-items-center mb-0">
+            <thead>
+                <tr>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">#</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Proje Numarası</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Menü Adı</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Proje Tarihi</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-8">Proje Drumu</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-9">Güncelle</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sil</th>
+
+                    <th class="text-secondary opacity-7"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <div class="d-flex px-2 py-1">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <p class="text-xs text-secondary mb-0">@item.Id</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="text-xs font-weight-bold mb-0">@item.ProjectId</p>
+
+                        </td>
+                        <td>
+                            <p class="text-xs font-weight-bold mb-0">@item.Menu</p>
+
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                            <span class="text-secondary text-xs font-weight-bold">@item.Date</span>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                            <span class="badge bg-gradient-info">@item.Status</span>
+                        </td>
+
+                        <td class="align-middle text-center text-sm">
+                            <a type="button" href="/MainMenu/Update/@item.Id" class="btn bg-gradient-primary">Güncelle</a>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                            <a type="button" href="/MainMenu/Delete/@item.Id" class="btn bg-gradient-danger">Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <td class="align-middle text-center text-sm">
+                <a type="button" asp-action="Add" asp-controller="MainMenu" class="btn bg-gradient-secondary">Yeni Proje</a>
+            </td>
+        </table>
+    </div>
+</div>
+

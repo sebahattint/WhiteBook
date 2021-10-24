@@ -1,0 +1,30 @@
+﻿@model ProjectAddModel
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-controller="Project" asp-action="Add" class="form-control" method="post">
+    <div class="form-group">
+        <label asp-for="Project.Proje"></label>
+        <input class="form-control" type="text" asp-for="Project.Proje">
+    </div>
+    <div class="form-group">
+        <label asp-for="Project.Date"></label>
+        <input class="form-control" type="date" asp-for="Project.Date">
+    </div>
+    <div class="form-group">
+        <label for="example-text-input" asp-for="Project.Status" class="form-control-label">Proje Başlangıç Durumu</label>
+        <div class="form-check mb-3">
+            <input class="form-check-input" value="true" type="radio" asp-for="Project.Status">
+            <label class="custom-control-label" asp-for="Project.Status" for="customRadio1"> True</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="false" asp-for="Project.Status">
+            <label class="custom-control-label" asp-for="Project.Status" for="customRadio2">False</label>
+        </div>
+    </div>
+    <input type="submit" value="Yeni Proje"  class="btn bg-gradient-secondary" />
+
+</form>
+

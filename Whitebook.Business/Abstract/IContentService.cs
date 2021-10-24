@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Whitebook.Whitebook.Dto.Entities;
+using Whitebook.WhiteBookDto.Entities;
 
-namespace Whitebook.Business.Abstract
+namespace WhiteBookBusiness.Abstract
 {
     public interface IContentService:IRepositoryService<Content>
     {

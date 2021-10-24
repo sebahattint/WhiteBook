@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Whitebook.Business.Abstract;
-using Whitebook.Whitebook.Dto.Entities;
+using Whitebook.WhiteBookDto.Entities;
+using WhiteBookBusiness.Abstract;
 using WhiteBookDataAccess.Abstract;
 
-namespace Whitebook.Business.Concrete
+namespace WhiteBookBusiness.Concrete
 {
     public class ProjectManager : IProjectService
     {

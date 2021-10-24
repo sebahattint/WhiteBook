@@ -1,41 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Whitebook.Business.Abstract;
-using Whitebook.Whitebook.Dto.Entities;
+using Whitebook.WhiteBookDto.Entities;
+using WhiteBookBusiness.Abstract;
+using WhiteBookDataAccess.Abstract;
 
-namespace Whitebook.Business.Concrete
+namespace WhiteBookBusiness.Concrete
 {
     public class MainMenuManager : IMainMenuService
     {
+        IMainMenuDal _mainMenuDal;
+
+        public MainMenuManager(IMainMenuDal mainMenuDal)
+        {
+            _mainMenuDal = mainMenuDal;
+        }
+
         public void Add(MainMenu entity)
         {
-            throw new NotImplementedException();
+            _mainMenuDal.Add(entity);
         }
 
         public void Delete(MainMenu entity)
         {
-            throw new NotImplementedException();
-        }
-
-        public MainMenu Get()
-        {
-            throw new NotImplementedException();
+            _mainMenuDal.Delete(entity);
         }
 
         public MainMenu Get(int id)
         {
-            throw new NotImplementedException();
+            return _mainMenuDal.Get(x=>x.Id==id);
         }
 
         public List<MainMenu> GetAll()
         {
-            throw new NotImplementedException();
+            return _mainMenuDal.GetAll();
         }
 
         public void Update(MainMenu entity)
         {
-            throw new NotImplementedException();
+            _mainMenuDal.Update(entity);
         }
     }
 }

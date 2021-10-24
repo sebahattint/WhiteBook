@@ -1,41 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Whitebook.Business.Abstract;
-using Whitebook.Whitebook.Dto.Entities;
+using Whitebook.WhiteBookDto.Entities;
+using WhiteBookBusiness.Abstract;
+using WhiteBookDataAccess.Abstract;
 
-namespace Whitebook.Business.Concrete
+namespace WhiteBookBusiness.Concrete
 {
     public class SubMenuManager : ISubMenuService
     {
+        ISubmenuDal _submenuDal;
+
+        public SubMenuManager(ISubmenuDal submenuDal)
+        {
+            _submenuDal = submenuDal;
+        }
+
         public void Add(Submenu entity)
         {
-            throw new NotImplementedException();
+            _submenuDal.Add(entity);
         }
 
         public void Delete(Submenu entity)
         {
-            throw new NotImplementedException();
+            _submenuDal.Delete(entity);
         }
-
-        public Submenu Get()
-        {
-            throw new NotImplementedException();
-        }
-
         public Submenu Get(int id)
         {
-            throw new NotImplementedException();
+            return _submenuDal.Get(x=>x.Id==id);
         }
 
         public List<Submenu> GetAll()
         {
-            throw new NotImplementedException();
+            return _submenuDal.GetAll();
         }
 
         public void Update(Submenu entity)
         {
-            throw new NotImplementedException();
+            _submenuDal.Update(entity);
         }
     }
 }
